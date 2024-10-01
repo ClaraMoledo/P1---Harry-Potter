@@ -1,0 +1,478 @@
+
+body {
+    background-color: black;
+}
+
+/*HEADER*/
+
+header {
+    background: linear-gradient(360deg,black,#343434, #ff0000,#f7ff07,#0dc003,blue);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 9rem;
+    gap: 8rem !important;
+}
+
+header:hover {
+    background: linear-gradient(360deg,black,black,#707070);
+}
+
+.header1 {
+    margin-top: 2rem;
+    gap: 2rem;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.header1:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/*MAIN*/
+/* Estilos para a seção de filtro */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 2rem;
+}
+
+/* Criterio dos Filtros */
+#filterCriterio {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    margin-right: 10px;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    color: #000000;
+}
+#filterCriterio{
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+#filterCriterio:hover{
+    background: linear-gradient(274deg, #ff0000,#f7ff07,#0dc003,blue);
+    color: rgb(0, 0, 0) !important;
+}
+/* Efeitos de foco */
+#filterCriterio:focus,#filterInput:focus {
+    border-color: #000000;
+    color: rgb(0, 0, 0);
+}
+
+/*Digite o que quer?*/
+#filterInput {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: linear-gradient(150deg,rgb(255, 255, 255),#c0c0c0,#bababa);
+}
+
+.cssInput {
+    /*Fonte*/
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*Botão de Filtro*/
+#filterButton {
+    padding: 10px;
+    width: 50px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+#filterButton:hover {
+    background: linear-gradient(360deg, #ff0000,#f7ff07,#0dc003,blue);
+    color: #000000;
+    border-radius: rgb(0, 255, 0) 2;
+    
+}
+
+.header2 {
+    margin-top: 2rem;
+    gap: 2rem;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+}
+.header2:hover{
+    color: #4dff00;
+}
+
+p{
+    margin-top: 2rem;
+    gap: 2rem;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+}
+p:hover{
+    color: rgb(111, 255, 0);
+    cursor: pointer;
+}
+
+/*Cards dos Personagens*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 2rem;
+    font-family: "Edu QLD Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 2rem;
+    font-style: normal;
+}
+
+/*Imagens dos personagens*/
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Adiciona transição ao efeito de hover */
+    margin: 2.5rem;
+}
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+.card img {
+    width: 150px; /* Define um tamanho fixo para a imagem */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+
+/* BOTÃO DE FAVORITOS */
+button, #favorites {
+    padding: 10px; /* Padding pode ser ajustado para dar mais espaço */
+    background-color: transparent !important; /* Fundo transparente */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeitos de transição */
+    width: 50px; /* Largura fixa para o botão */
+    height: 50px; /* Altura fixa para o botão */
+    border-radius: 2rem; /* Faz o botão*/
+    border: rgb(255, 0, 43) solid;
+}
+
+button > #favorites:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito de hover com fundo claro*/
+    color: #d900ff; /* Cor do texto ao passar o mouse*/
+    cursor: pointer;
+    }
+
+/* Estilo do modal */
+#characterModal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed; /* Fixa o modal na tela */
+    z-index: 1000; /* Garante que o modal esteja acima de outros conteúdos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    overflow: auto; /* Adiciona rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/*Caixa que fica os detalhes*/
+.modal-content {
+    display: flex;  /* Usar flexbox para alinhar a imagem e os detalhes */
+    flex-direction: row;  /* Alinhar os itens horizontalmente */
+    align-items: flex-start;
+    margin: 5% auto;
+    padding: 20px;
+    border: 0px solid #000000;
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+}
+
+#modalCharacterDetails {
+    margin-left: 20px; /* Espaçamento entre a imagem e os detalhes */
+    padding: 1rem;
+    gap: 2rem;
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 23px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 3; /* Controla o espaçamento entre as linhas */
+}
+
+/* Estilo das imagens no modal */
+#modalCharacterImage {
+    width: 350px; /* Largura fixa */
+    height: 500px; /* Altura fixa */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+    border-radius: 8px; /* Faz o fundo circular */
+}
+
+/*As cores das Casas de Hogwarts dentro da caixa que aparece os detalhes*/
+.modal-content.house-gryffindor {
+    background: linear-gradient(150deg, #fef620,#d60000,#ad0000);
+    color: rgb(255, 255, 255);
+}
+.modal-content.house-gryffindor:hover {
+    background: linear-gradient(302deg, #fef620,#d60000,#ad0000,#fef739);       
+    color: rgb(244, 244, 244);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(252, 2, 2);
+}
+.modal-content.house-slytherin {
+    background: linear-gradient(302deg, #00521d,#006611,#088000,#03b300,#4dff00);    
+    color: rgb(255, 255, 255);
+}
+.modal-content.house-slytherin:hover {
+    background: linear-gradient(302deg, #4dff00,#088000,#00521d,#4dff00);
+    color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(50, 255, 57);
+}
+.modal-content.house-hufflepuff {
+    background: linear-gradient(337deg, #000000,#000000,#fef620,#fef620,#fef620); 
+    color: rgb(0, 0, 0);
+}
+.modal-content.house-hufflepuff:hover {
+    background: linear-gradient(337deg,#000000,#fef620,#fef620,#fef620,#fef620);
+    color: black;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(255, 251, 0);
+}
+.modal-content.house-ravenclaw {
+    background: linear-gradient(337deg, #0300b3,#0333c4,#1826ec,#d7ddee,#cddcfe);                                                                 
+    color: rgb(0, 0, 0);
+}
+.modal-content.house-ravenclaw:hover {
+    background: linear-gradient(337deg, #0300b3,#d7ddee,#0300b3);
+    color: black;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(8, 0, 255);
+}
+.modal-content.house-unknown {
+    background: linear-gradient(337deg,#d7ddee, #000000,#000000,#000000);
+    color: rgb(255, 255, 255);
+}
+.modal-content.house-unknown:hover {
+    background: linear-gradient(337deg,#000000,#d7ddee,#000000,);
+    color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+/* CLOSE */
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+}
+
+/* Cores para as Cada Casa */
+.house-gryffindor {
+    background: linear-gradient(150deg, #fef620,#d60000,#ad0000);
+    color: white;
+}
+.house-gryffindor:hover {
+    background: linear-gradient(302deg, #fef620,#d60000,#ad0000,#fef739);       
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(252, 2, 2);
+}
+.house-slytherin {
+    background: linear-gradient(302deg, #00521d,#006611,#088000,#03b300,#4dff00);    
+    color: rgb(255, 255, 255);                             
+}
+.house-slytherin:hover{
+    background: linear-gradient(302deg, #4dff00,#088000,#00521d,#4dff00);
+    color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(50, 255, 57);
+}
+.house-hufflepuff {
+    background: linear-gradient(337deg, #000000,#000000,#fef620,#fef620,#fef620); 
+    color: white;
+}
+.house-hufflepuff:hover{
+    background: linear-gradient(337deg,#fef620,#fef620,#000000,#fef620,#fef620);
+    color: black;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(255, 251, 0);
+}
+.house-ravenclaw {
+    background: linear-gradient(337deg, #0300b3,#0333c4,#1826ec,#d7ddee,#cddcfe);                                                         
+    color: white;
+}
+.house-ravenclaw:hover{
+    background: linear-gradient(337deg, #0300b3,#d7ddee,#0300b3);
+    color: black;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(8, 0, 255);
+}
+.house-unknown {
+    background: linear-gradient(337deg,#d7ddee, #000000,#000000,#000000);
+    color: white;
+}
+.house-unknown:hover{
+    background: linear-gradient(337deg,#000000,#d7ddee,#000000,);
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(360deg,rgb(0, 255, 0),rgb(0, 181, 0),#001c01,#000000 );
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+footer:hover {
+    background: linear-gradient(360deg,#707070,black,black);
+}
+
+.cssfooter {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    text-align: center;      /* Centraliza o texto */
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 15px;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+.cssfooter:hover {
+    color: rgb(42, 251, 0);
+    cursor: pointer;
+    transition: color 0.3s;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 400px) {
+    .card img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .header1 {
+        font-size: 1.2rem;
+    }
+
+    #filterCriterio, #filterInput {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #filterButton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

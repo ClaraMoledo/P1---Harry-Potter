@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="img/hogwarts.png">
+    
+    <title>The World Hogwarts</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FONTE -->
+    <!-- Titulo/ Favoritos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Indie+Flower&family=Playwrite+DE+Grund:wght@100..400&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+        <!-- filterCriterio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+
+    <!-- Card -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Edu+QLD+Beginner:wght@400..700&family=Indie+Flower&family=Playwrite+DE+Grund:wght@100..400&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+<header>
+
+    <div class="header1">
+        <h1>The Wizarding World</h1>
+    </div>
+
+</header>
+
+<main>
+
+    <!-- Seção de filtro -->
+    <div class="filter-section">
+        <label for="filterCriterio" class="visually-hidden"> </label>
+        <select id="filterCriterio" aria-label="Critério de filtro">
+            <option value="name">Name</option>
+            <option value="species">Species</option>
+            <option value="house">House of Hogwarts</option>
+            <option value="ancestry">Ancestry</option>
+        </select>
+        <input class="cssInput" type="text" id="filterInput" placeholder="Write the criteria..." aria-label="Campo de filtro">
+        <!-- Botão com ícone de lupa e acessibilidade -->
+        <button id="filterButton" aria-label="Search" title="Search">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    
+    <div class="container" id="character-list">
+        <!-- Os personagens serão adicionados aqui -->
+    </div>
+
+    <div>
+        <h2 class="header2">Favorites</h2>
+    </div>
+    
+    <div class="container" id="favorites-list">
+        <!-- Os personagens favoritos serão adicionados aqui -->
+    </div>
+
+    <!-- Modal -->
+    <div id="characterModal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Fechar modal">&times;</span>
+            <img id="modalCharacterImage" src="https://via.placeholder.com/200" alt="Character Image" class="modal-character-img">
+            <div id="modalCharacterDetails" class="modal-character-details">
+                <strong>Name:</strong> <span id="modalCharacterName">Unknown</span> <br>
+                <strong>Species:</strong> 
+                <span id="modalCharacterSpecies">Unknown</span> <br>
+                <strong>Gender:</strong> 
+                <span id="modalCharacterGender">Unknown</span> <br>
+                <strong>House:</strong> 
+                <span id="modalCharacterHouse">Unknown</span> <br>
+                <strong>Ancestry:</strong> 
+                <span id="modalCharacterAncestry">Unknown</span> <br>
+                <strong>Patronus:</strong> 
+                <span id="modalCharacterPatronus">Unknown</span> 
+                <strong>Actor:</strong> 
+                <span id="modalCharacterActor">Unknown</span>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p class="cssfooter">&copy; 2024 Moledo</p>
+</footer>
+
+</body>
+<!-- JavaScript -->
+<script src="java.js"></script>
+</html>
